@@ -7,7 +7,7 @@ linked list and a value. Return true if the value is
 in the linked list.
 
 ## Whiteboard Problem 01 picture:
-![alt text](Whiteboard-01.JPG)
+![alt text](assets/Whiteboard-01.JPG)
 
 ## Whiteboard Problem 01 solution:
 
@@ -32,7 +32,7 @@ an empty or single item list should be considered sorted.
 because it’s not not sorted.
 
 ## Whiteboard Problem 02 picture:
-![alt text](Whiteboard-02.JPG)
+![alt text](assets/Whiteboard-02.JPG)
 
 ## Whiteboard Problem 02 solution:
 
