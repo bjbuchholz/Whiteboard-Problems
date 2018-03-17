@@ -48,3 +48,35 @@ because it’s not not sorted.
     }
     return true;
 }
+## Whiteboard Problem 03:
+
+* Write a function called `isBalanced` that accepts a
+string of left and right brackets and returns true if
+the brackets are balanced.
+
+Use a stack!
+Push whenever you see an opening curly brace.
+Pop whenever you see a closing curly brace.
+If you see a closing curly brace when the stack is empty,
+that's an error.
+
+## Whiteboard Problem 03 picture:
+![alt text](assets/Whiteboard-03.JPG)
+
+## Whiteboard Problem 03 solution:
+
+* function isBalanced(str) {
+    let stack = [];
+    let open = { '{': '}' };
+    let closed = { '}': true };
+    for (var i = 0; i < str.length; i++) {
+        let char = str[i];
+        if (open[char]) {
+            stack.push[char]
+        } else if (closed[char]) {
+            if (open[stack.pop()] !== char)
+             return false;
+        }
+    }
+    return stack.length === 0;
+};
