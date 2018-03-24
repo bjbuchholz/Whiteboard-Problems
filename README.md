@@ -89,10 +89,10 @@ Assume the string your given is all lowercase, contains no punctuation and each 
 If you were given good input for the last verse of The Twelve Days of Christmas your function should return "a" because "a" is the word that appears the most in this verse:
 
 
-## Whiteboard Problem 03 picture:
+## Whiteboard Problem 04 picture:
 ![alt text](assets/Whiteboard-04.JPG)
 
-## Whiteboard Problem 03 solution:
+## Whiteboard Problem 04 solution:
 
 * let tally = function (str {
     let mw = {};
