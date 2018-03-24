@@ -80,3 +80,37 @@ that's an error.
     }
     return stack.length === 0;
 };
+## Whiteboard Problem 04:
+
+* Write a function called tally that accepts a string and returns the most frequently used word in the string.
+
+Assume the string your given is all lowercase, contains no punctuation and each word is seperated by exactly one space.
+
+If you were given good input for the last verse of The Twelve Days of Christmas your function should return "a" because "a" is the word that appears the most in this verse:
+
+
+## Whiteboard Problem 03 picture:
+![alt text](assets/Whiteboard-04.JPG)
+
+## Whiteboard Problem 03 solution:
+
+* let tally = function (str {
+    let mw = {};
+    let hv = 0;
+    let hk = null;
+    if (str.length === 0 ) return false
+    let arr = str.split(" ");
+    for (let i = 0; i < app.length; i++){
+        if (mw[i] === undefined) {
+            mw[i] = 0;
+        }
+            mw[i]++
+    }
+    for( key in mw) {
+        if( mw[key]> hv) {
+            hv = mw[key];
+            hk = key;
+        }
+    } 
+    return hk;
+});
