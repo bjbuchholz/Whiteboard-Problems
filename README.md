@@ -114,3 +114,64 @@ If you were given good input for the last verse of The Twelve Days of Christmas 
     } 
     return hk;
 });
+
+## Whiteboard Problem 05:
+
+* Write a function called merge that accepts two sorted Linked Lists and zips them together into one sorted Linked List.
+
+Be sure to draw pictures on the whiteboard to represent example input. Use psuedo code to engineer any particularly tricky pieces of code.
+
+Given:
+
+8 -> 12 -> 14
+9 -> 13
+
+## Whiteboard Problem 05 picture:
+![alt text](assets/Whiteboard-05.JPG)
+![alt text](assets/Whiteboard-05.1.JPG)
+## Whiteboard Problem 05 solution:
+
+* 
+function merge(l1, l2) {
+  let result = new LinkedList();
+
+  let c1 = l1.root;
+  let c2 = l2.root;
+  if (c1 === null) {
+    result.root = c2;
+    return result;
+  }
+  if (c2 === null) {
+    result.root = c1;
+    return result;
+  }
+
+  if (c1.value <= c2.value) {
+    result.root = c1;
+    c1 = c1.next;
+  } else {
+    result.root = c2;
+    c2 = c2.next;
+  }
+
+  let last = result.root;
+  while (c1 !== null && c2 !== null) {
+    if (c1.value < c2.value) {
+      last.next = c1;
+      c1 = c1.next;
+    } else {
+      last.next = c2;
+      c2 = c2.next;
+    }
+    last = last.next;
+  }
+
+  if (c1 !== null) {
+    last.next = c1;
+  }
+
+  if (c2 !== null) {
+    last.next = c2;
+  }
+  return result;
+}
