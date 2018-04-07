@@ -175,3 +175,27 @@ function merge(l1, l2) {
   }
   return result;
 }
+
+## Whiteboard Problem 06:
+
+* Write a function called `reverse` that takes one integer as a parameter. Return a new integer with all the digits reversed. Only use common math operations like `+*/%`. You may use `Math.floor` to help with rounding.
+Do not arrays. Do not use strings. You are forbidden. Stay in the land of numbers.
+
+ex.reverseInt(459); // returns 954
+
+
+## Whiteboard Problem 06 picture:
+![alt text](assets/Whiteboard-06.JPG)
+
+## Whiteboard Problem 06 solution:
+
+* function reverse (integer) {
+    let oldNumber = integer;
+    let newNumber = 0;
+    while (oldNumber !== 0) {
+        let remainder = oldNumber % 10;
+        newNumber = newNumber * 10 + remainder;
+        oldNumber = math.floor(oldNumber / 10);
+    }
+return newNumber;
+};
