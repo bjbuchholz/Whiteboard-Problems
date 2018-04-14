@@ -199,3 +199,28 @@ ex.reverseInt(459); // returns 954
     }
 return newNumber;
 };
+
+## Whiteboard Problem 07:
+
+* Write a function called `highestProduct` that accepts an array of integers. Return the largest value of any two values multiplied together from the array.
+
+Given:
+[32, 534, 6, 3, 3, 6, 7, 353]
+
+Return:
+188, 502 (534 * 353)
+
+
+## Whiteboard Problem 07 picture:
+![alt text](assets/Whiteboard-07.JPG)
+
+## Whiteboard Problem 07 solution:
+
+* function highestProduct(array) {
+    let sorted = array.sort((a,b) => {
+        return a-b;
+    });
+    let last = sorted[sorted.length -1];
+    let secondToLast = sorted[sorted.length -2];
+    return last *secondToLast;
+};
