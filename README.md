@@ -212,7 +212,7 @@ Return:
 
 
 ## Whiteboard Problem 07 picture:
-![alt text](assets/Whiteboard-07.JPG)
+![alt text](assets/Whiteboard-07resubmit.JPG)
 
 ## Whiteboard Problem 07 solution:
 
@@ -220,7 +220,16 @@ Return:
     let sorted = array.sort((a,b) => {
         return a-b;
     });
+    let first = sorted[0];
+    let second = sorted[1];
+    let firstProduct = first * second;
     let last = sorted[sorted.length -1];
     let secondToLast = sorted[sorted.length -2];
-    return last *secondToLast;
+    let lastProduct = last * secondToLast;
+
+  if (firstProduct > lastProduct) {
+    return firstProduct;
+  } else if (lastProduct > firstProduct) {
+    return lastProduct;
+    }
 };
