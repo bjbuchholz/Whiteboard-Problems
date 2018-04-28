@@ -233,3 +233,29 @@ Return:
     return lastProduct;
     }
 };
+## Whiteboard Problem 08:
+
+* Write a function called `isDiff` that accepts two objects and returns `true` if there's any difference between the objects. It should return false if the object contains all the same key-value pairs.
+
+You may assume the values in the objects contain only simple values like strings, numbers, and booleans. Assume the values in the objects are not custom classes, arrays, or other objects.  
+
+## Whiteboard Problem 08 picture:
+![alt text](assets/Whiteboard-08.JPG)
+
+## Whiteboard Problem 08 solution:
+
+* function isDiff(obj1, obj2) {
+    for(let key in obj1) {
+        let val1 = obj1[key]
+        let val2 = obj2[key]
+        if (val1 !== val2) {
+            return true;
+        }
+    for(let key in obj2) {
+        if (val2 !== val1) {
+            return true;
+        }
+        }
+    }
+    return false;
+}
